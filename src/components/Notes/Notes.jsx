@@ -1,25 +1,17 @@
 import React from "react";
 
-const Notes = () => {
+const Notes = ({element}) => {
+  console.log(element);
   return (
     <div>
-      <div className="container my-4">
+      <div className="container my-4" >
         <div className="row justify-content-center">
           <div className="col-md-10">
             <div className="card">
               <h5 className="card-header">Your Notes</h5>
-              <div className="card-body">
-                <h5 className="card-title">Title</h5>
-                <p className="card-text">Description</p>
-                {/* <button className="btn btn-primary">Edit</button> */}
-                {/* <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                >
-                  Edit
-                </button> */}
+              <div className="card-body text-capitalize">
+                <h5 className="card-title">{element.title}</h5>
+                <p className="card-text">{element.desc}</p>
                 <button
                   type="button"
                   class="btn btn-primary"
