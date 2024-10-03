@@ -11,7 +11,8 @@ const App = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [notes, setNotes] = useState([]);
-  // localStorage.setItem("notes").JSONstringify(notes)
+  // const [notes, setNotes] = useState(getNotesFromLs);
+  // localStorage.setItem("notes".JSON.stringify(notes))
   console.log(notes);
   return (
     <div>
@@ -33,20 +34,28 @@ const App = () => {
           <div className="card">
             <h5 className="card-header">Your Notes</h5>
             <div className="card-body">
-              <h5 className="card-title">Message</h5>
-              <p className="card-text">No Notes Present</p>
+              {/* <h5 className="card-title">Message</h5> */}
+              <p className="card-text">No Data Present</p>
             </div>
           </div>
         </div>
       ) : (
         notes.map((element) => {
-          return <NotesEdit element = {element}/>;
+          return <NotesEdit element = {element} key={element.id} notes={notes} setNotes={setNotes} />;
         })
       )}
     </div>
     </div>
    </div>
-  );
+  )
+  // function getNotesFromLs(){
+  //   const note= JSON.parse(localStorage.getItem("notes"));
+  //   if(note){
+  //     return note
+  //   }else{
+  //     return [];
+  //   }
+  // }
 };
 
 export default App;

@@ -1,7 +1,24 @@
 import React from "react";
 
-const Notes = ({element}) => {
+const Notes = ({element, notes, setNotes}) => {          //"element","Notes","setNotes" pass as a destruction
   console.log(element);
+  const removeHandler = (id) => {       
+    const newNotes = notes.filter((elm)=>{
+      if(elm.id!==id){
+        return elm;
+      }
+    })
+    setNotes(newNotes);
+  }
+  // const editHandler = (id) =>{
+  //   notes.filter((elm)=>{
+  //     if(elm.id===id){
+  //       document.getElementById("edittitle").value=elem.title;
+  //       document.getElementById("editdesc").value=elem.desc;
+  //     }
+  //   } )
+  // }
+ 
   return (
     <div>
       <div className="container my-4" >
@@ -16,11 +33,16 @@ const Notes = ({element}) => {
                   type="button"
                   class="btn btn-primary"
                   data-toggle="modal"
-                  data-target="#exampleModal"
+                  data-target="#exampleModal" 
+                  // onClick={()=>{
+                  //   editHandler(element.id)
+                  // }} 
                 >
                   Edit
                 </button>
-                <button className="btn btn-danger mx-2">Remove</button>
+                <button className="btn btn-danger mx-2" onClick={()=>{
+                  removeHandler(element.id)
+                }} >Remove</button>
               </div>
             </div>
           </div>

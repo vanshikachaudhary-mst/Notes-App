@@ -2,10 +2,10 @@ import React from "react";
 
 const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
   const inputHandler = (e) => {
-    if (e.target.id === "title") {
+    if (e.target.id === "title") {          //if input id = title, set target value
       setTitle(e.target.value);
     } else {
-      setDesc(e.target.value);
+      setDesc(e.target.value);              // else, set description
     }
   };
   const addNotesHandler = (e) => {
@@ -16,9 +16,10 @@ const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
         return [
           ...notes,
           {
-            //...is a spread operator
+            //...is a spread operator - return all previous notes too
             title: title.trim(),
             desc: desc.trim(),
+            id:new Date().getTime()
           },
         ];
       });
