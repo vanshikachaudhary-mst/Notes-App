@@ -61,6 +61,7 @@ const App = () => {
       </div>
     </div>
   );
+  
   function getNotesFromLs(){
     const note= JSON.parse(localStorage.getItem("notes"));
     if(note){
