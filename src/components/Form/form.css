@@ -1,0 +1,22 @@
+body{
+    background: linear-gradient(to left, #1a1a1b, #57535a);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+form{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    
+}
+label{
+    margin-top: 10px;
+    margin-bottom: 6px;
+    color: aliceblue;
+    font-weight: 400;
+    font-size: 18px;
+}
