@@ -8,6 +8,7 @@ import NotesEdit from "./components/Notes/Notes";
 import Navbar from "./components/Navbar/Navbar";
 import EditModal from "./components/Form/EditModal";
 import Login from "./components/LogIn/Login";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 
 const App = () => {
   const [title, setTitle] = useState("");
@@ -17,9 +18,14 @@ const App = () => {
   console.log(notes);
   return (
     <div>
-      <Login/>
+      <Router>
+        <Routes>
+        <Route path="/login" element={<Login />} />
+        </Routes>
+      </Router>
+      {/* <Login/> */}
       <EditModal />
-      {/* <Navbar />
+      <Navbar />
       <Form
         title={title}
         setTitle={setTitle}
@@ -52,7 +58,7 @@ const App = () => {
             })
           )}
         </div>
-      </div> */}
+      </div>
     </div>
   );
   function getNotesFromLs(){
