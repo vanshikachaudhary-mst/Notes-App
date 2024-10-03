@@ -1,4 +1,5 @@
 import React from "react";
+import './form.css'
 
 const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
   const inputHandler = (e) => {
@@ -50,7 +51,7 @@ const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
                 />
               </div>
               <div className="form-group">
-                <label for="exampleInputPassword1">Description</label>
+                <label for="exampleInputPassword1 ">Description</label>
                 <textarea
                   type="description"
                   className="form-control"

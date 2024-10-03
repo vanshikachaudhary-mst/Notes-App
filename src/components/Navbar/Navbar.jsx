@@ -7,7 +7,6 @@ const Navbar = () => {
         <a className="navbar-brand mx-3 " href="#">
           Notes
         </a>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto ">
             <li className="nav-item">
               <a className="nav-link mx-3" href="#">
@@ -15,7 +14,6 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-        </div>
       </nav>
     </div>
   );
