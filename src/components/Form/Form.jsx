@@ -25,7 +25,7 @@ const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
           },
         ];
       });
-    setTitle(""); //to null the value when click on create button
+    setTitle("");  //to null the value when click on create button
     setDesc("");
   };
   return (

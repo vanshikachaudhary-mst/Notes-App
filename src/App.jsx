@@ -15,8 +15,10 @@ const App = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [notes, setNotes] = useState(getNotesFromLs);
+  const [showModal, setShowModal] = useState(false); 
   localStorage.setItem("notes",JSON.stringify(notes));
   console.log(notes);
+  const toggleModal = () => setShowModal(!showModal);
   return (
     <div>
        <Router>
@@ -25,7 +27,7 @@ const App = () => {
 
         <Route path="/notes" element={
           <div>
-            <EditModal />
+            <EditModal show={showModal} toggleModal={toggleModal}/>
             <Navbar />
             <Form
               title={title}
@@ -54,6 +56,7 @@ const App = () => {
                         key={element.id}
                         notes={notes}
                         setNotes={setNotes}
+                        toggleModal={toggleModal} 
                       />
                     );
                   })

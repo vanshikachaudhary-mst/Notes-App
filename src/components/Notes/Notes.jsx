@@ -1,15 +1,13 @@
 import React from "react";
 
-const Notes = ({element, notes, setNotes}) => {          //"element","Notes","setNotes" pass as a destruction
+const Notes = ({element, notes, setNotes, toggleModal}) => {          //"element","Notes","setNotes" pass as a destruction
   console.log(element);
-  const removeHandler = (id) => {       
-    const newNotes = notes.filter((elm)=>{
-      if(elm.id!==id){
-        return elm;
-      }
-    })
+
+   const removeHandler = (id) => {
+    const newNotes = notes.filter((elm) => elm.id !== id);
     setNotes(newNotes);
-  }
+  };
+
   // const editHandler = (id) =>{
   //   notes.filter((elm)=>{
   //     if(elm.id===id){
@@ -31,12 +29,8 @@ const Notes = ({element, notes, setNotes}) => {          //"element","Notes","se
                 <p className="card-text">{element.desc}</p>
                 <button
                   type="button"
-                  class="btn btn-primary"
-                  data-toggle="modal"
-                  data-target="#exampleModal" 
-                  // onClick={()=>{
-                  //   editHandler(element.id)
-                  // }} 
+                  className="btn btn-primary"
+                  onClick={toggleModal} // Open modal on click
                 >
                   Edit
                 </button>
