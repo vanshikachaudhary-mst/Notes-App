@@ -1,44 +1,57 @@
 import React from "react";
+import"./editmodal.css";
 
-const EditModal = () => {
+const EditModal = ({show, toggleModal}) => {
   return (
     <div>
       <div
-        className="modal fade"
-        id="exampleModal"
+          className={`modal fade ${show ? 'show' : ''}`}
+          style={{ display: show ? 'block' : 'none' }}
         tabindex="-1"
         role="dialog"
         aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
+        aria-hidden={!show}
       >
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
-                Modal Notes 
-              </h5>
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
+                Edit
+              </h5>  
             </div>
-            <div className="modal-body"></div>
+            <div className="modal-body">
+            <div className="form-data">
+              <form>
+              <input
+                  type="text"
+                  className="form-control"
+                  id="title"
+                  placeholder="Your Title"
+      
+                />
+                <input
+                  type="text"
+                  className="form-control"
+                  id="description"
+                  placeholder="Your Description"
+               
+                />
+              </form>
+              </div>
+            </div>
             <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={toggleModal}
+            >
+              Close
+            </button>
               <button type="button" className="btn btn-primary">
                 Save changes
               </button>
             </div>
+            
           </div>
         </div>
       </div>

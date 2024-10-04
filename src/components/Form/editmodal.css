@@ -1,0 +1,31 @@
+.modal-content {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.411);
+  border-radius: 8px;
+}
+.modal-title {
+  font-size: 16px;
+}
+.modal-header {
+  height: 20px;
+}
+.modal-footer {
+  /* border-top: none; */
+  height: 60px;
+}
+.btn-primary {
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.btn-secondary {
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.btn-primary {
+  padding: 4px 8px;
+  font-size: 14px;
+}
+.modal-body {
+  height: 200px;
+}
