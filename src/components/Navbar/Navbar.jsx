@@ -1,5 +1,15 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+     
+      sessionStorage.clear(); 
+      navigate('/', { replace: true });
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
@@ -7,10 +17,11 @@ const Navbar = () => {
           Notes
         </a>
           <ul className="navbar-nav ms-auto ">
-            <li className="nav-item">
-              <a className="nav-link mx-3" href="#">
+            <li className="nav-item mx-3 ">
+              {/* <a className="nav-link mx-3" href="#">
                 Create
-              </a>
+              </a> */}
+              <button onClick={handleLogout}>Logout</button>
             </li>
           </ul>
       </nav>

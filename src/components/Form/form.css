@@ -1,8 +1,5 @@
 body{
-    background: linear-gradient(to left, #1a1a1b, #57535a);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(to left, #1a1a1b,  #b3aeb8);
     height: 100%;
 }
 form{
@@ -20,3 +17,9 @@ label{
     font-weight: 400;
     font-size: 18px;
 }
+input::placeholder{
+        font-size: 14px;
+}
+
+
+
