@@ -18,47 +18,53 @@ const App = () => {
   console.log(notes);
   return (
     <div>
-      <Router>
-        <Routes>
+       <Router>
+      <Routes>
+        {/* Route for the Login component */}
         <Route path="/login" element={<Login />} />
-        </Routes>
-      </Router>
-      {/* <Login/> */}
-      <EditModal />
-      <Navbar />
-      <Form
-        title={title}
-        setTitle={setTitle}
-        desc={desc}
-        setDesc={setDesc}
-        notes={notes}
-        setNotes={setNotes}
-      />
-      <div className="container my-4">
-        <div className="row justify-content-center">
-          {notes.length === 0 ? (
-            <div className="box col-md-10">
-              <div className="card">
-                <h5 className="card-header">Your Notes</h5>
-                <div className="card-body">
-                  <p className="card-text">No Data Present</p>
-                </div>
+        
+        {/* Route for the main application components */}
+        <Route path="/" element={
+          <div>
+            <EditModal />
+            <Navbar />
+            <Form
+              title={title}
+              setTitle={setTitle}
+              desc={desc}
+              setDesc={setDesc}
+              notes={notes}
+              setNotes={setNotes}
+            />
+            <div className="container my-4">
+              <div className="row justify-content-center">
+                {notes.length === 0 ? (
+                  <div className="box col-md-10">
+                    <div className="card">
+                      <h5 className="card-header">Your Notes</h5>
+                      <div className="card-body">
+                        <p className="card-text">No Data Present</p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  notes.map((element) => {
+                    return (
+                      <NotesEdit
+                        element={element}
+                        key={element.id}
+                        notes={notes}
+                        setNotes={setNotes}
+                      />
+                    );
+                  })
+                )}
               </div>
             </div>
-          ) : (
-            notes.map((element) => {
-              return (
-                <NotesEdit
-                  element={element}
-                  key={element.id}
-                  notes={notes}
-                  setNotes={setNotes}
-                />
-              );
-            })
-          )}
-        </div>
-      </div>
+          </div>
+        } />
+      </Routes>
+    </Router>
     </div>
   );
   
