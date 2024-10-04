@@ -10,6 +10,7 @@ import EditModal from "./components/Form/EditModal";
 import Login from "./components/LogIn/Login";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 
+
 const App = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -20,11 +21,9 @@ const App = () => {
     <div>
        <Router>
       <Routes>
-        {/* Route for the Login component */}
-        <Route path="/login" element={<Login />} />
-        
-        {/* Route for the main application components */}
-        <Route path="/" element={
+        <Route path="/" element={<Login />} />
+
+        <Route path="/notes" element={
           <div>
             <EditModal />
             <Navbar />

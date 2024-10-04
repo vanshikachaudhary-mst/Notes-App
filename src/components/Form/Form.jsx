@@ -1,12 +1,13 @@
 import React from "react";
-import './form.css'
+import "./form.css";
 
 const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
   const inputHandler = (e) => {
-    if (e.target.id === "title") {          //if input id = title, set target value
+    if (e.target.id === "title") {
+      //if input id = title, set target value
       setTitle(e.target.value);
     } else {
-      setDesc(e.target.value);              // else, set description
+      setDesc(e.target.value); // else, set description
     }
   };
   const addNotesHandler = (e) => {
@@ -20,7 +21,7 @@ const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
             //...is a spread operator - return all previous notes too
             title: title.trim(),
             desc: desc.trim(),
-            id:new Date().getTime()
+            id: new Date().getTime(),
           },
         ];
       });
@@ -39,7 +40,7 @@ const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
                 padding: "20px",
               }}
             >
-              <div className="form-group mt-2 " >
+              <div className="form-group mt-2 ">
                 <label for="exampleInputEmail1">Title</label>
                 <input
                   type="text"
