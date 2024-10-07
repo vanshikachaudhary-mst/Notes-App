@@ -1,25 +1,25 @@
-body{
-    background: linear-gradient(to left, #1a1a1b,  #b3aeb8);
-    height: 100%;
+body {
+  background: radial-gradient(
+    circle,
+    rgba(200, 225, 204),
+    rgba(227, 218, 255),
+    rgb(253, 253, 205)
+  );
+  height: 100%;
 }
-form{
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    
+form {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  /* border: 1px solid rgba(10, 8, 8, 0.5); */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-label{
-    margin-top: 10px;
-    margin-bottom: 6px;
-    color: aliceblue;
-    font-weight: 400;
-    font-size: 18px;
+label {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: 400;
+  font-size: 18px;
 }
-input::placeholder{
-        font-size: 14px;
+input::placeholder {
+  font-size: 14px;
 }
-
-
-

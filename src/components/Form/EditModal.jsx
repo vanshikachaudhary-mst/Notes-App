@@ -65,6 +65,7 @@ const EditModal = ({ show, toggleModal, editId, notes, setNotes }) => {
               >
                 Save
               </button>
+              
             </div>
           </div>
         </div>

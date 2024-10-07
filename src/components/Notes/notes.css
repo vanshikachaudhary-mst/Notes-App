@@ -1,0 +1,19 @@
+.card{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.card-header{
+    font-size: 16px;
+}
+.btn{
+    height: 38px;
+}
+.card-title{
+    font-size: 15px;
+}
+.card-text{
+    font-size: 14px;
+}

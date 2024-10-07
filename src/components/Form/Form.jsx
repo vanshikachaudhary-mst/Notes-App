@@ -1,7 +1,9 @@
 import React from "react";
 import "./form.css";
+import { useNavigate } from "react-router-dom";
 
 const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
+  const navigate = useNavigate();
   const inputHandler = (e) => {
     if (e.target.id === "title") {
       //if input id = title, set target value
@@ -27,6 +29,7 @@ const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
       });
     setTitle("");  //to null the value when click on create button
     setDesc("");
+    navigate("/notes");
   };
   return (
     <div>

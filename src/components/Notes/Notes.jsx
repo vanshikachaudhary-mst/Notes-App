@@ -1,9 +1,10 @@
 import React from "react";
+import './notes.css'
 
 const Notes = ({element, notes, setNotes, toggleModal, seteditId}) => {          //"element","Notes","setNotes" pass as a destruction
   console.log(element);
 
-   const removeHandler = (id) => {
+  const removeHandler = (id) => {
     const newNotes = notes.filter((elm) => elm.id !== id);
     setNotes(newNotes);
     
@@ -18,8 +19,7 @@ const Notes = ({element, notes, setNotes, toggleModal, seteditId}) => {         
       }
     } )
   }
- 
-  return (
+   return (
     <div>
       <div className="container my-4" >
         <div className="row justify-content-center">
