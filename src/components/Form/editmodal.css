@@ -9,7 +9,7 @@
   height: 20px;
 }
 .modal-footer {
-  /* border-top: none; */
+  border-top: none;
   height: 60px;
 }
 .btn-primary {
@@ -28,4 +28,10 @@
 }
 .modal-body {
   height: 200px;
+}
+.modal-form{
+  height: 180px;
+  display: flex;
+ flex-direction: column;
+ padding: 20px;
 }
