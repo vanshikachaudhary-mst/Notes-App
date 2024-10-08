@@ -1,4 +1,4 @@
-/* body {
+body {
   background: radial-gradient(
     circle,
     rgba(200, 225, 204),
@@ -6,7 +6,7 @@
     rgb(253, 253, 205)
   );
   height: 100%;
-} */
+}
 
 form {
   background: rgba(255, 255, 255, 0.2);
