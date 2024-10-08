@@ -6,28 +6,28 @@ const Form = ({ title, setTitle, desc, setDesc, notes, setNotes }) => {
   const navigate = useNavigate();
   const inputHandler = (e) => {
     if (e.target.id === "title") {
-      //if input id = title, set target value
+     
       setTitle(e.target.value);
     } else {
-      setDesc(e.target.value); // else, set description
+      setDesc(e.target.value);
     }
   };
   const addNotesHandler = (e) => {
     e.preventDefault();
     if (title.trim() !== "" && desc.trim() !== "")
-      //without trim - for not taking empty text,trim - validation for the whitespace characters
+      
       setNotes((notes) => {
         return [
           ...notes,
           {
-            //...is a spread operator - return all previous notes too
+           
             title: title.trim(),
             desc: desc.trim(),
             id: new Date().getTime(),
           },
         ];
       });
-    setTitle("");  //to null the value when click on create button
+    setTitle("");  
     setDesc("");
     navigate("/notes");
   };
