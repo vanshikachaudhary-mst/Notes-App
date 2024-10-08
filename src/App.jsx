@@ -8,6 +8,7 @@ import NotesEdit from "./components/Notes/Notes";
 import Navbar from "./components/Navbar/Navbar";
 import EditModal from "./components/Form/EditModal";
 import Login from "./components/LogIn/Login";
+// import Extra from "./components/Form/extra";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <Navbar /> 
         <Routes>
           <Route path="/" element={<Login />} />
+          {/* <Route path="/extra" element={<Extra/>} />    */}
           <Route
             path="/form"
             element={
